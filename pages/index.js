@@ -70,12 +70,12 @@ export default function InputPage() {
             <input type="text" id={`months-${index}`} name={`months-${index}`} style={{ marginBottom: '10px' }}/>
 
             <div style={{ marginBottom: '10px' }}>
-              <input type="checkbox" id={`vat-${index}`} name={`vat-${index}`} />
+              <input type="checkbox" id={`vat-${index}`} name={`vat-${index}`} defaultChecked={true} />
               <label htmlFor={`vat-${index}`}>έχει ΦΠΑ</label>
             </div>
 
             <div>
-              <input type="checkbox" id={`withholding-${index}`} name={`withholding-${index}`} />
+              <input type="checkbox" id={`withholding-${index}`} name={`withholding-${index}`} defaultChecked={true}/>
               <label htmlFor={`withholding-${index}`}>Σου κάνουν παρακράτηση 20%</label>
             </div>
 

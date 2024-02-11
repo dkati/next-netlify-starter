@@ -84,7 +84,7 @@ export default function InputPage() {
         ))}
       </div>
       <div style={{ marginTop: '10px' }}>
-           <label>TA NOYMEΡΑ ΤΑ ΠΑΙΡΝΟΥΜΕ ΑΠΟ ΤΟ mycerth.gr -> Συμβασεις μου -> ποσά τερμα δεξιά</label>
+           <label>TA NOYMEΡΑ ΤΑ ΠΑΙΡΝΟΥΜΕ ΑΠΟ ΤΟ mycerth.gr - Συμβασεις μου - ποσά τερμα δεξιά</label>
       </div>
       <button onClick={handleSubmit} style={{ cursor: 'pointer' }}>Βγαλε τα ποσά</button>
       <div style={{ marginTop: '10px' }}>

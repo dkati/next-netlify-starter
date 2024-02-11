@@ -32,9 +32,11 @@ export default function InputPage() {
      const months4 = (document.getElementById('months-4').value === "" ? 0 : document.getElementById('months-4').value);
      const permonth4 = amount4Value / (months4 === 0 ? 1 : months4);
 
-     const permonth = permonth0 + permonth1 + permonth2 + permonth3 + permonth4
+     const withFpa = permonth0 + permonth1 + permonth2 + permonth3 + permonth4
 
-     const fpa = (permonth0 / 1.24) + (permonth1 / 1.24) + (permonth2 / 1.24) + (permonth3 / 1.24) + (permonth4 / 1.24) 
+     const tmp = (permonth0 / 1.24) + (permonth1 / 1.24) + (permonth2 / 1.24) + (permonth3 / 1.24) + (permonth4 / 1.24) 
+
+     const fpa = withFpa - tmp; 
      console.log('per month:', roundUp(permonth));
      console.log('fap total:', roundUp(fpa));
   };

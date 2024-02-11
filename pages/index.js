@@ -37,8 +37,8 @@ export default function InputPage() {
      const tmp = (permonth0 / 1.24) + (permonth1 / 1.24) + (permonth2 / 1.24) + (permonth3 / 1.24) + (permonth4 / 1.24) 
 
      const fpa = withFpa - tmp; 
-     console.log('per month:', roundUp(permonth));
-     console.log('fap total:', roundUp(fpa));
+     console.log('per month:', roundUp(withFpa));
+     console.log('ΦΠΑ total:', roundUp(fpa));
   };
 
   return (

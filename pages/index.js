@@ -88,50 +88,7 @@ export default function InputPage() {
 
          
 
-            <div>
-        <label>
-          <input
-            type="radio"
-            value="`Option1_${index}`"
-            checked={selectedOption === "`Option1_${index}`"}
-            onChange={handleRadioChange}
-          />
-          Είμαι στο άρθρο 9 (κάτω από 5 χρόνια)
-        </label>
-      </div>
-      <div>
-        <label>
-          <input
-            type="radio"
-            value="`Option2_${index}`"
-            checked={selectedOption === "`Option2_${index}`"}
-            onChange={handleRadioChange}
-          />
-          Είμαι στο άρθρο 9 (πάνω από 5 χρόνια)
-        </label>
-      </div>
-      <div>
-        <label>
-          <input
-            type="radio"
-            value="`Option3_${index}`"
-            checked={selectedOption === "`Option3_${index}`"}
-            onChange={handleRadioChange}
-          />
-         Πληρώνω τον ΕΦΚΑ μου (κάτω από 5 χρόνια)
-        </label>
-      </div>
-      <div>
-        <label>
-          <input
-            type="radio"
-            value="`Option4_${index}`"
-            checked={selectedOption === "`Option4_${index}`"}
-            onChange={handleRadioChange}
-          />
-          Πληρώνω τον ΕΦΚΑ μου (πάνω από 5 χρόνια)
-        </label>
-      </div>
+       
              
           </div>
         ))}

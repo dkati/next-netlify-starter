@@ -36,16 +36,16 @@ export default function InputPage() {
 
      
      const tmp = 
-        document.getElementById('vat-0').checked ? (permonth0 / 1.24) : 0 
-      + document.getElementById('vat-1').checked ? (permonth1 / 1.24) : 0 
-      + document.getElementById('vat-2').checked ? (permonth2 / 1.24) : 0 
-      + document.getElementById('vat-3').checked ? (permonth3 / 1.24) : 0 
-      + document.getElementById('vat-4').checked ? (permonth4 / 1.24) : 0 
+        (document.getElementById('vat-0').checked ? (permonth0 / 1.24) : 0 )
+      + (document.getElementById('vat-1').checked ? (permonth1 / 1.24) : 0 )
+      + (document.getElementById('vat-2').checked ? (permonth2 / 1.24) : 0 )
+      + (document.getElementById('vat-3').checked ? (permonth3 / 1.24) : 0 )
+      + (document.getElementById('vat-4').checked ? (permonth4 / 1.24) : 0 );
 
      const fpa = withFpa - tmp; 
      console.log('per month:', roundUp(withFpa));
   
-     document.getElementById('fpa').innerText = "Συνολικό ΦΠΑ που θα πρέπει να δώσεις : " + roundUp(fpa) + " €";
+     document.getElementById('fpa').innerText = "Συνολικό ΦΠΑ που θα πρέπει να δίνεις, ανά μήνα : " + roundUp(fpa) + " €";
   };
 
   return (

@@ -44,7 +44,7 @@ export default function InputPage() {
 
      const withFpa = permonth0 + permonth1 + permonth2 + permonth3 + permonth4
 
-     const fpa = withFpa - tmp;  
+     const fpa = fpa0+fpa1+fpa2+fpa3+fpa4; 
      document.getElementById('fpa').innerText = "Συνολικό ΦΠΑ που θα πρέπει να δίνεις, ανά μήνα : " + roundUp(fpa) + " €";
 
      const trapeza = withfpa - foros0 - foros1 - foros2 - foros3 - foros4;

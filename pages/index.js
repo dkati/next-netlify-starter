@@ -34,12 +34,18 @@ export default function InputPage() {
 
      const withFpa = permonth0 + permonth1 + permonth2 + permonth3 + permonth4
 
-     const tmp = (permonth0 / 1.24) + (permonth1 / 1.24) + (permonth2 / 1.24) + (permonth3 / 1.24) + (permonth4 / 1.24) 
+     
+     const tmp = 
+        document.getElementById('vat-0').checked ? (permonth0 / 1.24) : 0 
+      + document.getElementById('vat-1').checked ? (permonth1 / 1.24) : 0 
+      + document.getElementById('vat-2').checked ? (permonth2 / 1.24) : 0 
+      + document.getElementById('vat-3').checked ? (permonth3 / 1.24) : 0 
+      + document.getElementById('vat-4').checked ? (permonth4 / 1.24) : 0 
 
      const fpa = withFpa - tmp; 
      console.log('per month:', roundUp(withFpa));
   
-     document.getElementById('fpa').innerText = "Συνολικό ΦΠΑ που θα πρέπει να δώσεις : " + roundUp(fpa);
+     document.getElementById('fpa').innerText = "Συνολικό ΦΠΑ που θα πρέπει να δώσεις : " + roundUp(fpa) + " €";
   };
 
   return (
@@ -63,13 +69,14 @@ export default function InputPage() {
               <label htmlFor={`withholding-${index}`}>Σου κάνουν παρακράτηση 20%</label>
             </div>
 
-            <div style={{ marginTop: '10px' }}>
-              <label id="fpa"></label>
-            </div>
+           
           </div>
         ))}
       </div>
       <button onClick={handleSubmit} style={{ cursor: 'pointer' }}>Βγαλε τα ποσά</button>
+      <div style={{ marginTop: '10px' }}>
+            <label id="fpa"></label>
+      </div>
     </div>
   );
 }

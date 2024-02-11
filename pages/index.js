@@ -7,10 +7,24 @@ import { useState } from 'react';
 
 export default function InputPage() {
  // You might want to manage state here if you need to handle form submission or input validation
-  
+  const [selectedOption, setSelectedOption] = useState('');
+  const handleRadioChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
  
  
   const handleSubmit = () => {
+     if (selectedOption === "Option1") {
+      console.log("The first radio button is checked.");
+    } else if (selectedOption === "Option2"){
+       console.log("The second radio button is checked.");
+    }
+   else if (selectedOption === "Option3"){
+       console.log("The third radio button is checked.");
+    }else  
+       console.log("The fourth radio button is checked.");
+    }
+   
     // Here you can handle the submission logic, e.g., calculating amounts, validating inputs, etc.
      const amount0Value = (document.getElementById('amount-0').value === "" ? 0 : document.getElementById('amount-0').value);
      const months0 = (document.getElementById('months-0').value === "" ? 0 : document.getElementById('months-0').value);
@@ -79,7 +93,56 @@ export default function InputPage() {
               <label htmlFor={`withholding-${index}`}>Σου κάνουν παρακράτηση 20%</label>
             </div>
 
-           
+            <div>
+              <input type="checkbox" id={`withholding-${index}`} name={`withholding-${index}`} defaultChecked={false}/>
+              <label htmlFor={`withholding-${index}`}>Ειμαι στο άρθρο 9 (κάτω από </label>
+            </div>
+
+            <div>
+        <label>
+          <input
+            type="radio"
+            value="Option1"
+            checked={selectedOption === "Option1"}
+            onChange={handleRadioChange}
+          />
+          Option 1
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            type="radio"
+            value="Option2"
+            checked={selectedOption === "Option2"}
+            onChange={handleRadioChange}
+          />
+          Option 2
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            type="radio"
+            value="Option3"
+            checked={selectedOption === "Option3"}
+            onChange={handleRadioChange}
+          />
+          Option 3
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            type="radio"
+            value="Option4"
+            checked={selectedOption === "Option4"}
+            onChange={handleRadioChange}
+          />
+          Option 4
+        </label>
+      </div>
+             
           </div>
         ))}
       </div>

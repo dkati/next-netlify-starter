@@ -21,7 +21,7 @@ export default function InputPage() {
     }
    else if (selectedOption === "Option3"){
        console.log("The third radio button is checked.");
-    }else  
+    }else  {
        console.log("The fourth radio button is checked.");
     }
    

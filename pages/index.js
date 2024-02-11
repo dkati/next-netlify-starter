@@ -27,7 +27,10 @@ export default function InputPage() {
      const permonth4 = amount4Value / (months4 === 0 ? 1 : months4);
 
      const permonth = permonth0 + permonth1 + permonth2 + permonth3 + permonth4
+
+     const fpa = (permonth0 / 1.24) + (permonth1 / 1.24) + (permonth2 / 1.24) + (permonth3 / 1.24) + (permonth4 / 1.24) 
      console.log('per month:', permonth);
+     console.log('fap total:',fpa);
   };
 
   return (

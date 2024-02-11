@@ -6,7 +6,8 @@ export default function InputPage() {
   
   const handleSubmit = () => {
     // Here you can handle the submission logic, e.g., calculating amounts, validating inputs, etc.
-    console.log('Handle form submission');
+     const amount1Value = document.getElementById('amount-1').value;
+     console.log('Value of amount-1:', amount1Value);
   };
 
   return (

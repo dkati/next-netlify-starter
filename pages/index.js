@@ -38,7 +38,8 @@ export default function InputPage() {
 
      const fpa = withFpa - tmp; 
      console.log('per month:', roundUp(withFpa));
-     console.log('ΦΠΑ total:', roundUp(fpa));
+  
+     document.getElementById('fpa').value = "Συνολικό ΦΠΑ που θα πρέπει να δώσεις : " + roundUp(fpa);
   };
 
   return (
@@ -60,6 +61,10 @@ export default function InputPage() {
             <div>
               <input type="checkbox" id={`withholding-${index}`} name={`withholding-${index}`} />
               <label htmlFor={`withholding-${index}`}>Σου κάνουν παρακράτηση 20%</label>
+            </div>
+
+            <div style={{ marginTop: '10px' }}>
+              <label id="fpa"></label>
             </div>
           </div>
         ))}

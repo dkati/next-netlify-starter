@@ -14,16 +14,9 @@ export default function InputPage() {
  
  
   const handleSubmit = () => {
-     if (selectedOption === "Option1") {
-      console.log("The first radio button is checked.");
-    } else if (selectedOption === "Option2"){
-       console.log("The second radio button is checked.");
-    }
-   else if (selectedOption === "Option3"){
-       console.log("The third radio button is checked.");
-    }else  {
-       console.log("The fourth radio button is checked.");
-    }
+     if (selectedOption === "Option1_0") {
+      console.log("The first radio button of first column is checked.");
+    }  
    
     // Here you can handle the submission logic, e.g., calculating amounts, validating inputs, etc.
      const amount0Value = (document.getElementById('amount-0').value === "" ? 0 : document.getElementById('amount-0').value);

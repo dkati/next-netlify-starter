@@ -39,7 +39,7 @@ export default function InputPage() {
      const fpa = withFpa - tmp; 
      console.log('per month:', roundUp(withFpa));
   
-     document.getElementById('fpa').value = "Συνολικό ΦΠΑ που θα πρέπει να δώσεις : " + roundUp(fpa);
+     document.getElementById('fpa').innerText = "Συνολικό ΦΠΑ που θα πρέπει να δώσεις : " + roundUp(fpa);
   };
 
   return (

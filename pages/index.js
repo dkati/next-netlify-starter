@@ -63,7 +63,7 @@ export default function InputPage() {
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
         {Array.from({ length: 5 }).map((_, index) => (
           <div key={index} style={{ display: 'flex', flexDirection: 'column', maxWidth: '180px' }}>
-            <label htmlFor={`amount-${index}`}>Ποσό σύμβασης ${index+1} που αναγράφεται στο mycerth</label>
+            <label htmlFor={`amount-${index}`}>Ποσό σύμβασης {index+1} που αναγράφεται στο mycerth</label>
             <input type="text" id={`amount-${index}`} name={`amount-${index}`} style={{ marginBottom: '10px' }}/>
 
             <label htmlFor={`months-${index}`}>Μήνες σύμβασης</label>

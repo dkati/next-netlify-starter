@@ -93,53 +93,50 @@ export default function InputPage() {
               <label htmlFor={`withholding-${index}`}>Σου κάνουν παρακράτηση 20%</label>
             </div>
 
-            <div>
-              <input type="checkbox" id={`withholding-${index}`} name={`withholding-${index}`} defaultChecked={false}/>
-              <label htmlFor={`withholding-${index}`}>Ειμαι στο άρθρο 9 (κάτω από </label>
-            </div>
+         
 
             <div>
         <label>
           <input
             type="radio"
-            value="Option1"
-            checked={selectedOption === "Option1"}
+            value="Option1_{index}"
+            checked={selectedOption === "Option1_{index}"}
             onChange={handleRadioChange}
           />
-          Option 1
+          Είμαι στο άρθρο 9 (κάτω από 5 χρόνια)
         </label>
       </div>
       <div>
         <label>
           <input
             type="radio"
-            value="Option2"
-            checked={selectedOption === "Option2"}
+            value="Option2_{index}"
+            checked={selectedOption === "Option2_{index}"}
             onChange={handleRadioChange}
           />
-          Option 2
+          Είμαι στο άρθρο 9 (πάνω από 5 χρόνια)
         </label>
       </div>
       <div>
         <label>
           <input
             type="radio"
-            value="Option3"
-            checked={selectedOption === "Option3"}
+            value="Option3_{index}"
+            checked={selectedOption === "Option3_{index}"}
             onChange={handleRadioChange}
           />
-          Option 3
+         Πληρώνω τον ΕΦΚΑ μου (κάτω από 5 χρόνια)
         </label>
       </div>
       <div>
         <label>
           <input
             type="radio"
-            value="Option4"
-            checked={selectedOption === "Option4"}
+            value="Option4_{index}"
+            checked={selectedOption === "Option4_{index}"}
             onChange={handleRadioChange}
           />
-          Option 4
+          Πληρώνω τον ΕΦΚΑ μου (πάνω από 5 χρόνια)
         </label>
       </div>
              

@@ -1,23 +1,23 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import { useState } from 'react';
 
-export default function Home() {
+export default function InputPage() {
+  const [inputValue, setInputValue] = useState('');
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
   return (
-    <div className="container">
-      <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-      </main>
-
-      <Footer />
+    <div>
+      <label htmlFor="editText">Edit Text:</label>
+      <input
+        type="text"
+        id="editText"
+        name="editText"
+        value={inputValue}
+        onChange={handleInputChange}
+      />
+      <p>You typed: {inputValue}</p>
     </div>
-  )
+  );
 }

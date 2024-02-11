@@ -47,7 +47,7 @@ export default function InputPage() {
      const fpa = fpa0+fpa1+fpa2+fpa3+fpa4; 
      document.getElementById('fpa').innerText = "Συνολικό ΦΠΑ που θα πρέπει να δίνεις, ανά μήνα : " + roundUp(fpa) + " €";
 
-     const trapeza = withfpa - foros0 - foros1 - foros2 - foros3 - foros4;
+     const trapeza = withFpa - foros0 - foros1 - foros2 - foros3 - foros4;
      document.getElementById('trapeza').innerText = "Ποσό που θα μπει τράπεζα, ανά μήνα : " + roundUp(trapeza) + " €";
   };
 

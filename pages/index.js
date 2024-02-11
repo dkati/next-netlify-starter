@@ -16,31 +16,31 @@ export default function InputPage() {
      const months0 = (document.getElementById('months-0').value === "" ? 0 : document.getElementById('months-0').value);
      const permonth0 = amount0Value / (months0 === 0 ? 1 : months0);
      const fpa0 = (document.getElementById('vat-0').checked ? permonth0 - (permonth0 / 1.24) : 0 );
-     const foros0 = (document.getElementById('withholding-0').checked ?  (20*(permonth0-fpa0) / 100) : 0 );
+     const foros0 = (document.getElementById('withholding-0').checked ?  ((20*(permonth0-fpa0)) / 100) : 0 );
 
      const amount1Value = (document.getElementById('amount-1').value === "" ? 0 : document.getElementById('amount-1').value);
      const months1 = (document.getElementById('months-1').value === "" ? 0 : document.getElementById('months-1').value);
      const permonth1 = amount1Value / (months1 === 0 ? 1 : months1);
      const fpa1 = (document.getElementById('vat-1').checked ? permonth1 - (permonth1 / 1.24) : 0 );
-     const foros1 = (document.getElementById('withholding-1').checked ? (20*(permonth1-fpa1) / 100) : 0 );
+     const foros1 = (document.getElementById('withholding-1').checked ? ((20*(permonth1-fpa1) / 100)) : 0 );
    
      const amount2Value = (document.getElementById('amount-2').value === "" ? 0 : document.getElementById('amount-2').value);
      const months2 = (document.getElementById('months-2').value === "" ? 0 : document.getElementById('months-2').value);
      const permonth2 = amount2Value / (months2 === 0 ? 1 : months2);
      const fpa2 = (document.getElementById('vat-2').checked ? permonth2 - (permonth2 / 1.24) : 0 );
-     const foros2 = (document.getElementById('withholding-2').checked ? (20*(permonth2-fpa2) / 100) : 0 );
+     const foros2 = (document.getElementById('withholding-2').checked ? ((20*(permonth2-fpa2) / 100)) : 0 );
    
      const amount3Value = (document.getElementById('amount-3').value === "" ? 0 : document.getElementById('amount-3').value);
      const months3 = (document.getElementById('months-3').value === "" ? 0 : document.getElementById('months-3').value);
      const permonth3 = amount3Value / (months3 === 0 ? 1 : months3);
      const fpa3 = (document.getElementById('vat-3').checked ? permonth3 - (permonth3 / 1.24) : 0 );
-     const foros3 = (document.getElementById('withholding-3').checked ? (20*(permonth3-fpa3) / 100) : 0 );
+     const foros3 = (document.getElementById('withholding-3').checked ? ((20*(permonth3-fpa3) / 100)) : 0 );
    
      const amount4Value = (document.getElementById('amount-4').value === "" ? 0 : document.getElementById('amount-4').value);
      const months4 = (document.getElementById('months-4').value === "" ? 0 : document.getElementById('months-4').value);
      const permonth4 = amount4Value / (months4 === 0 ? 1 : months4);
      const fpa4 = (document.getElementById('vat-0').checked ? permonth4 - (permonth4 / 1.24) : 0 );
-     const foros4 = (document.getElementById('withholding-4').checked ? (20*(permonth4-fpa4) / 100) : 0 );
+     const foros4 = (document.getElementById('withholding-4').checked ? ((20*(permonth4-fpa4) / 100)) : 0 );
 
      const withFpa = permonth0 + permonth1 + permonth2 + permonth3 + permonth4;
 

@@ -7,7 +7,7 @@ export default function InputPage() {
   const handleSubmit = () => {
     // Here you can handle the submission logic, e.g., calculating amounts, validating inputs, etc.
      const amount1Value = document.getElementById('amount-0').value;
-     const months = document.getElementById('').value;
+     const months = document.getElementById('months-0').value;
      const permonth = amount1Value / months;
      console.log('per month:', permonth);
   };

@@ -1,9 +1,15 @@
 import { useState } from 'react';
 // app url: https://main--chipper-dango-4cce50.netlify.app/
+
+ function roundUp(num) {
+    return Math.ceil(num * 100) / 100;
+   }
+
 export default function InputPage() {
  // You might want to manage state here if you need to handle form submission or input validation
   
-  
+ 
+ 
   const handleSubmit = () => {
     // Here you can handle the submission logic, e.g., calculating amounts, validating inputs, etc.
      const amount0Value = (document.getElementById('amount-0').value === "" ? 0 : document.getElementById('amount-0').value);
@@ -29,8 +35,8 @@ export default function InputPage() {
      const permonth = permonth0 + permonth1 + permonth2 + permonth3 + permonth4
 
      const fpa = (permonth0 / 1.24) + (permonth1 / 1.24) + (permonth2 / 1.24) + (permonth3 / 1.24) + (permonth4 / 1.24) 
-     console.log('per month:', permonth);
-     console.log('fap total:',fpa);
+     console.log('per month:', roundUp(permonth));
+     console.log('fap total:', roundUp(fpa));
   };
 
   return (

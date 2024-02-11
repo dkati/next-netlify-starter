@@ -93,7 +93,7 @@ export default function InputPage() {
           <input
             type="radio"
             value="`Option1_${index}`"
-            checked={selectedOption === "`Option1_{index}`"}
+            checked={selectedOption === "`Option1_${index}`"}
             onChange={handleRadioChange}
           />
           Είμαι στο άρθρο 9 (κάτω από 5 χρόνια)
